@@ -1,0 +1,483 @@
+/* ----Custom Properties---- */
+:root{
+    --primary-color: #84d1bc;
+    --secondary-color: #84d1bc;
+    --white-color: #FFF;
+    --white-opacity-color: rgba(255,255,255,0.5);
+    --gray-color: #CCC;
+    --black-color: #000;
+    --black-opacity-color: rgba(0,0,0,0.5);
+    --link-color:rgb(255,255,255);
+    --font:"Merriweather", Sans-Serif;
+    --text-color:#222;
+    --max-width:1200px;
+    --header-height:6rem;
+}
+
+
+/* ----Reset---- */
+html {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 16px;
+    /* scroll-behavior: smooth; */
+  }
+ 
+*, 
+*:before, 
+*:after {
+box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    color:var(--text-color);
+}
+
+a{
+    color: var(--white-color);
+}
+
+h1{
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    margin: 0;
+    font-size: 1.5rem;
+}
+h3{
+    margin: 0;
+    font-size: 1.25rem;
+}
+h4{
+    margin: 0;
+    font-size: 1rem;
+}
+h5{
+    margin: 0;
+    font-size: 0.85rem;
+}
+h6{
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+img{
+    max-width: 100%;
+    height: 100%;
+}
+
+p{
+    line-height: 1.6;
+}
+
+/* ----Components---- */
+
+/* ----Utilities---- */
+
+.box-shadow-1{
+    box-shadow: 0.4rem 0.4rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+@keyframes beat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.09);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+.beat {
+    animation: pulse 1.5s linear infinite;
+  }
+
+  /* ----Site Styles---- */
+
+  .container{
+    width: 100vw;
+    height: 100%; 
+    display: grid;
+    grid-template: var(--header-height) repeat(5,1fr) 3rem / 1fr; 
+    gap:0.1rem;
+    grid-template-areas: 
+    "header"
+    "men"
+    "women"
+    "boys"
+    "girls"
+    "trends"
+    "footer";
+}
+
+.header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.header-container{
+    max-width: 100%;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #183440;
+    padding: 0 1rem;
+}
+
+.menu-burguer{
+    outline: thin solid #458BE1;
+    border: 0;
+    cursor: pointer;
+    background-color: #183440 ;
+}
+
+.menu-burguer svg{
+    fill: #458BE1;
+}
+
+.menu{
+    position: fixed;
+    left: 0;
+    top: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #183440;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+.menu a {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+  }
+
+.menu a:hover {
+    color: #458BE1; 
+    box-shadow: -0.1px -0.1px 1px 2px;
+} 
+
+.menu.is-active{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+.hidden{
+    display: none;
+}
+
+.logo {
+    width: auto;
+    min-width: 4rem;
+    height: calc(var(--header-height) - 1rem);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo:hover {
+        animation: beat 1.5s linear infinite;
+    }
+    
+.logo img {
+        width: auto;
+        height: 6rem;
+        padding: 0.25rem;
+    }
+        
+.slogan{
+    display: none;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons > button{
+    min-width: 0.5rem;
+    max-height: 2rem;
+    border:0;
+    background-color: #183440;
+    cursor: pointer;
+}
+
+button img{
+    min-width: 0.8rem;
+    max-height: 1.7rem;
+}
+
+.title-section{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 200;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+section > a {
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+}
+
+section > a:hover h2{
+    color: #458BE1; 
+    box-shadow: -0.1px -0.1px 1px 2px;
+} 
+
+aside > a {
+    text-decoration: none;
+    transition: all 0.4s ease-in;
+}
+
+aside > a:hover h2{
+    color: #458BE1; 
+    box-shadow: -0.1px -0.1px 1px 2px;
+} 
+
+.men{
+    grid-area: men;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.women{
+    grid-area: women;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.boys{
+    grid-area: boys;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.girls{
+    grid-area: girls;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.sidebar{
+    display: none;
+}
+
+.trends{
+    grid-area: trends;
+    display: flex;
+    flex-direction: column;
+    gap:0.1rem;
+}
+
+.trends-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.trends-itm-img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.trends-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    transition: transform 0.4s ease-in-out;
+    transform-origin: center center;
+}
+
+.trends-item:hover{
+    transform: scale(1.1);
+}
+
+.trends-item a{
+   background-color: var(--black-color); 
+   font-size: 1rem;
+   text-decoration: none;
+}
+
+
+.footer{
+    grid-area: footer;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #6f9196;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer a{
+    height: 2.5rem;
+    margin: 0;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    color:#222;
+}
+
+.footer p{
+    margin:0;
+    padding: 0;
+}
+
+.footer small{
+    margin:0;
+    padding: 0;
+}
+
+.social-media a img{
+    margin: 0.5rem 0;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+
+.legal{
+    display: none;
+}
+
+@media screen and (min-width: 48rem){
+    .container{
+        width: 100vw;
+        height: 100vh; 
+        display: grid;
+        grid-template: var(--header-height) repeat(3,1fr) 3rem / repeat(2,1fr);
+        grid-template-areas: 
+        "header header"
+        "men women"
+        "boys girls"
+        "trends trends"
+        "footer footer";
+    }
+
+    .slogan{
+        display: inline-block;
+        width: 12rem;
+        text-align: center;
+        font-family: var(--font);
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: italic;
+        animation: appear 4s ease forwards;
+        opacity: 0;
+    }
+
+    @keyframes appear {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            opacity:1
+        }
+    }
+
+    .trends-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 64rem){
+    .container{
+        width: 100%;
+        height: 100Vh; 
+        /* margin: auto; */
+        display: grid;
+        grid-template: var(--header-height) repeat(3,1fr) 3rem / repeat(2,1fr) 25vw; 
+        grid-template-areas: 
+        "header header header"
+        "men women sidebar"
+        "boys girls sidebar"
+        "trends trends trends"
+        "footer footer footer";
+    }
+
+    .menu-burguer{
+        display: none;
+    }
+
+    .menu{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu a:hover{
+        box-shadow: inset 0 -1.5px 0 0;
+    }
+
+    .sidebar{
+        grid-area: sidebar;
+        display: flex;
+        flex-direction: column; 
+        overflow: hidden;
+        gap:0.1rem;
+    }
+    
+    .trends-grid{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .legal{
+        display: flex;
+        align-items: center;
+        height: 2.5rem;
+       }
+    
+    .legal p{
+        margin: 0.5rem 0;
+        text-decoration: underline;
+    }
+
+}

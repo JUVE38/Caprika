@@ -3,27 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>Acerca De</title>
 </head>
 <body>
-    <header>
-        <img src="assests/Home.png" alt="Home" width="70px" height="50px">
-        <h2>Esta es mi web</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="misProductos.html">Mis Productos</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="acercaDe.html">Acerca De</a>
-    </nav>
-
-    </header>
+    <header class="header">
+        <div class="header-container"> 
+            <button class="menu-burguer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/>
+                </svg>
+                <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/>
+                </svg>
+            </button> 
+            <a class="logo" href="index.html">
+                <img src="assets/Sin título-2a.svg" alt="Home">
+                <h2 class="slogan">Calzado que te define paso a paso</h2>
+            </a>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="misProductos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="acercaDe.html">Acerca</a>
+            </nav>
+            <nav class="icons">
+                <button class="btn-login">
+                    <img src="assets/user48.png" alt="Login" >
+                </button>
+                <button class="btn-wish-list">
+                    <img src="assets/Corazon.png" alt="Deseados" >
+                </button>
+                <button class="btn-cart">
+                    <img src="assets/bolsa-compras.png" alt="Carrito" >
+                </button>
+            </nav> 
+        </div>               
+</header>
 
     <main>
-        <h1>Información de los integrantes del grupo</h1>
+        <h1>¡Más que una zapatería! <br> Una historia de pasión por el calzado</h1>
+        <br>
+        <br>
+        <h2>Un poco de historia</h2>
+        <div class="history">
+            <p> 
+                En Caprika, no solo vendemos zapatos, compartimos una pasión que se ha transmitido de generación en generación. <br>
+                Nuestra historia se remonta a un pequeño taller artesanal, donde Don Pedro Di Carli creaba con sus propias manos calzado único para cada cliente. 
+                El nombre Caprika nació de la combinación de dos palabras: Capri, la isla italiana de donde era oriundo Don Pedro, y Carli, por su apellido. <br>
+                Desde entonces, la pasión por el calzado ha corrido por nuestras venas. 
+                Heredamos el taller del abuelo y continuamos creando zapatos con la misma pasión y atención al detalle. 
+                Tuvimos la fortuna de crecer entre el aroma del cuero y el sonido de las martillos, aprendiendo los secretos del oficio.
+            </p>
+            <figure>
+                <img src="assets/Historia.jpg" alt="Don Pedro" class="box-shadow-1">
+                <figcaption>Don Pedro Di Carli, Capri, Italia.</figcaption>
+            </figure>
+        </div>
+        <hr>
+        <br>
+        <h2>Más que un eslogan, una filosofía</h2> 
+        <div class="vision">
+            <p> 
+                Creemos que el calzado es más que un simple accesorio.
+                Es una extensión de tu personalidad, una forma de expresar tu estilo único y de sentirte seguro y cómodo en cada paso que das. <br>
+                Con cada paso que das, dejas una huella en el mundo. Y esa huella debe ser fiel a quien eres. <br>
+                No importa cuál sea tu estilo, en Caprika encontrarás el calzado perfecto para ti. <br>
+                Por eso nuestro eslogan, <span>"Calzado que te define paso a paso"</span>, refleja a la perfección la esencia de nuestra marca.          
+            </p>
+            <figure>
+                <img src="assets/huella.jpeg" alt="Huella" class="box-shadow-1">
+                <figcaption>Cada paso, una huella de tu estilo.</figcaption>
+            </figure>
+        </div>
+        <br>
+        <hr> 
+        <h2>Sé parte de nuestra aventura</h2>
+        <div class="location">
+            <p> 
+                Al visitar Caprika, ya sea en nuestra tienda física o en nuestra página web, queremos que te sientas como en casa. 
+                Nuestro equipo de expertos te brindará una atención personalizada y te ayudará a encontrar el par de zapatos perfecto para ti.
+                Caprika: donde la pasión por el calzado se convierte en arte
+                Te esperamos para que juntos sigamos escribiendo la historia de Caprika.
+            </p>
+            <figure>
+            <iframe class="box-shadow-1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.418365814035!2d-58.873893432187714!3d-32.37838543291066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b1b3d39d1d02c1%3A0x43e5249c1e4cc1ff!2sEva%20Per%C3%B3n%20%26%20Avenida%209%20de%20Julio%2C%20Basavilbaso%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1717023826831!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <figcaption>Mapa de Ubicación.</figcaption>
+            </figure>
+        </div>
     </main>
 
-    <footer>
-        <p>Derechos reservados por copyright 2024.</p>
+    <footer class="footer">
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><img src="assets/Facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="assets/Instagram.png" alt="Instagram"></a>
+            <a href="https://www.x.com" target="_blank"><img src="assets/X.png" alt="X"></a>
+            <a href="https://www.linkedin.com" target="_blank"><img src="assets/LinkedIn.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="assets/Youtube.png" alt="Youtube"></a>
+        </div>
+        <div class="copyright">
+            <p><small>copyright &copy; 2024 Caprika, Inc.</small></p>
+        </div>
+        <div class="legal">
+            <a href="index.html"><p><small>Información Legal</small></p></a>
+            <a href="index.html"><p><small>Politica de Privacidad</small></p></a>
+        </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

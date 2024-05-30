@@ -1,0 +1,128 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vw;
+    font-family: var(--font);
+}
+
+.header-container{
+    max-width: 100%;
+}
+
+main{
+    flex-grow: 1;
+    background-image: url(../assets/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 3rem);
+}
+
+.form-wrapper{
+    background-color: rgba(0, 0, 0, 0.3);
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 28rem;
+    height: auto;
+    text-align: center;
+    border-radius: 3rem;
+}
+
+.form-container{
+    --form-ok:#4caf20;
+    --form-error:#f44340;
+    padding: 0.2rem;
+    margin: 0.3rem auto;
+}
+
+.form-container > * {
+    padding: 0.3rem;
+    margin: 0.8rem auto;
+    display: block;
+    width: 100%;
+  }
+
+.form-container input{
+    border-radius: 0.8rem;
+    border: thin solid var(--gray-color);
+    font-family: var(--font);
+    color:#555;
+}
+
+.form-container *::placeholder{
+    color:#555;
+}
+
+.form-container select{
+    border-radius: 0.8rem;
+    border: thin solid var(--gray-color);
+    outline: none;
+    font-family: var(--font);
+    color: #555;
+}
+
+.form-container p{
+    margin: 0 auto;
+}
+
+.options{
+    margin: 0 auto;
+}
+
+.options label{
+    padding-right: 1rem;
+}
+
+.form-container input[type="submit"],
+.form-container input[type="reset"]{
+    display: inline;
+    width: 40%;
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-left: 0.7rem;
+    cursor: pointer;
+}
+
+.form-container [required]:valid{
+    border: thin solid var(--form-ok);
+}
+
+.form-container [required]:invalid{
+    border: thin solid var(--form-error);
+}
+
+.form-error{
+    background-color:var(--form-error);
+    font-size: 70%;
+    color: var(--white-color);
+    transition: all 600ms ease;
+}
+
+.hidden{
+    display: none;
+}
+
+.form-response p{
+    color: white;
+    font-weight: bold;
+}
+
+.form-error.is-active{
+    margin-top: -0.8rem; 
+    display: block;
+    border-radius: 0.8rem;
+    animation: appear 1s 1 normal 0s ease-out both;
+}
+
+.footer{
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+}

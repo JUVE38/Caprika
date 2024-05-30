@@ -3,27 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
     <title>Caprika</title>
 </head>
 <body>
-    <header>
-        <img src="assests/Home.png" alt="Home" width="70px" height="50px">
-        <h2>Esta es mi web</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="misProductos.html">Mis Productos</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="acercaDe.html">Acerca De</a>
-    </nav>
+    <div class="container">
+        <header class="header">
+                <div class="header-container"> 
+                    <button class="menu-burguer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/>
+                        </svg>
+                        <svg class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/>
+                        </svg>
+                    </button> 
+                    <a class="logo" href="index.html">
+                        <img src="assets/Sin título-2a.svg" alt="Home">
+                        <h2 class="slogan">Calzado que te define paso a paso</h2>
+                    </a>
+                    <nav class="menu">
+                        <a href="index.html">Inicio</a>
+                        <a href="misProductos.html">Productos</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="acercaDe.html">Acerca</a>
+                    </nav>
+                    <nav class="icons">
+                        <button class="btn-login">
+                            <img src="assets/user48.png" alt="Login" >
+                        </button>
+                        <button class="btn-wish-list">
+                            <img src="assets/Corazon.png" alt="Deseados" >
+                        </button>
+                        <button class="btn-cart">
+                            <img src="assets/bolsa-compras.png" alt="Carrito" >
+                        </button>
+                    </nav> 
+                </div>               
+        </header>
+        <section class="men">
+            <a href="misProductos.html"><h2 class="title-section">Colección Hombres</h2></a>
+            <img src="assets/Caballeros.jpg" alt="Caballeros">
+        </section>
+        <section class="women">
+            <a href="misProductos.html"><h2 class="title-section">Colección Mujeres</h2></a>
+            <img src="assets/Damas.jpg" alt="Damas">
+        </section>
+        <section class="boys">
+            <a href="misProductos.html"><h2 class="title-section">Colección Niños</h2></a>
+            <img src="assets/Niños2.jpg" alt="Niños">
+        </section>
+        <section class="girls">
+            <a href="misProductos.html"><h2 class="title-section">Colección Niñas</h2></a>
+            <img src="assets/Niñas2.jpg" alt="Niñas">
+        </section>
+        <section class="trends">
+            <a href="misProductos.html"><h2 class="title-section">Tendencias</h2></a>
+            <article class="trends-grid">                
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia1.jpg" alt="Tendencias" class="trends-itm-img">
+                    <a href="index.html">Ver Detalle</a>
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia2.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia3.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia4.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia5.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia6.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia7.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia8.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia9.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia10.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia11.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+                <div class="trends-item box-shadow-1">
+                    <img src="assets/Tendencia12.jpg" alt="Tendencias" class="trends-itm-img">
+                </div>
+            </article> 
+        </section>
+        <aside class="sidebar">
+            <a href="index.html"><h2 class="title-section">Novedades</h2></a>
+            <img src="assets/Banner2.jpg" alt="Banner">
+            <img src="assets/Banner3.jpg" alt="Banner">
+            <img src="assets/Banner4.jpg" alt="Banner"> 
+        </aside>
+        <footer class="footer">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><img src="assets/Facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assets/Instagram.png" alt="Instagram"></a>
+                <a href="https://www.x.com" target="_blank"><img src="assets/X.png" alt="X"></a>
+                <a href="https://www.linkedin.com" target="_blank"><img src="assets/LinkedIn.png" alt="LinkedIn"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="assets/Youtube.png" alt="Youtube"></a>
+            </div>
+            <div class="copyright">
+                <p><small>copyright &copy; 2024 Caprika, Inc.</small></p>
+            </div>
+            <div class="legal">
+                <a href="index.html"><p><small>Información Legal</small></p></a>
+                <a href="index.html"><p><small>Politica de Privacidad</small></p></a>
+            </div>
+        </footer>
+    </div>
 
-    </header>
-
-    <main>
-        <h1>Bienvenidos a mi Página Web</h1>
-    </main>
-
-    <footer>
-        <p>Derechos reservados por copyright 2024.</p>
-    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

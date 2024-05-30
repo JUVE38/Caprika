@@ -1,0 +1,49 @@
+.header-container{
+    max-width: 100%;
+}
+
+h1{
+    text-align: center;
+    background-color: dimgray;
+    color: antiquewhite;
+}
+
+main h2{
+    background-color: dimgray;
+}
+
+span{
+font-style: italic;
+font-weight: bold;
+}
+
+.history, .location{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+} 
+
+figure{
+    width: 80rem;
+    text-align: center;
+    margin:0.5rem 0.5rem;
+}
+
+p {
+    padding: 1rem;
+    text-align: justify;
+}
+
+.history img {
+    width: 100%;
+    filter: grayscale(1);
+}
+
+.vision{
+    display: flex;
+    align-items: center;
+}
+
+.vision img {
+    width: 100%;
+}
